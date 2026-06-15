@@ -1,0 +1,5 @@
+# robots.txt — https://www.kshemisphere.com/
+User-agent: *
+Allow: /
+
+Sitemap: https://www.kshemisphere.com/sitemap.xml
