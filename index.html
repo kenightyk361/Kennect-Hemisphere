@@ -321,6 +321,7 @@ nav.topnav.scrolled .logo-img{height:50px}
 .story-head .eyebrow{margin:0}
 .story-head .cn-inline{font-family:var(--f-cn);font-weight:500;font-size:1.5rem;color:var(--c-warm);letter-spacing:.1em}
 .story-lead{font-family:var(--f-display);font-weight:300;font-size:clamp(1.4rem,2.6vw,2.1rem);line-height:1.35;letter-spacing:-.01em;color:var(--c-text);max-width:860px;margin-bottom:3.5rem}
+.story .body-lg{margin-bottom:3.5rem}
 .story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--c-border);margin-bottom:3rem}
 @media(max-width:720px){.story-grid{grid-template-columns:1fr}}
 .story-item{padding:2rem 1.75rem 2rem 0;border-right:1px solid var(--c-border)}
@@ -437,7 +438,7 @@ footer{background:var(--c-bg);border-top:1px solid var(--c-border);padding:5rem 
 .faq-item p{color:var(--c-text-2);line-height:1.7;font-size:.97rem;max-width:760px}
 
 /* INQUIRY FORM */
-.inquiry{position:relative;overflow:hidden;padding:clamp(5.5rem,11vw,11rem) 0;border-top:1px solid var(--c-border)}
+.inquiry{position:relative;overflow:hidden;padding:clamp(5.5rem,11vw,11rem) 0;border-top:1px solid rgba(212,165,116,.6)}
 .inquiry-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 .inquiry-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(5,13,33,.9),rgba(5,13,33,.93))}
 .inquiry-inner{position:relative;z-index:2}
@@ -586,14 +587,14 @@ footer{background:var(--c-bg);border-top:1px solid var(--c-border);padding:5rem 
   .hero-sig{margin-bottom:1.1rem}
   .hero-divider{margin:.9rem 0}
   .hero-sub{margin-bottom:1.35rem}
-  .scroll-hint{bottom:1.25rem}
+  .scroll-hint{bottom:1.25rem;left:auto;right:clamp(1.25rem,5vw,1.75rem);transform:none;align-items:flex-end}
   .sec-head{margin-bottom:2.5rem}
   .steps-head{margin-top:2.75rem;margin-bottom:1.1rem}
   .svc-strip{margin-bottom:3.25rem}
   .section-pad.services{padding-top:5.25rem}
   .section-pad.categories{padding-top:5.25rem}
   .section-pad.howwework{padding-top:5.25rem}
-  .section-pad.why{padding-bottom:5.25rem}
+  .section-pad.why{padding-top:clamp(2.5rem,5vw,3.5rem);padding-bottom:6.75rem}
 
   /* services + categories -> 2x3; cards hug content (no empty void) */
   .cats-grid{grid-template-columns:repeat(2,1fr);gap:.7rem}
@@ -627,13 +628,15 @@ footer{background:var(--c-bg);border-top:1px solid var(--c-border);padding:5rem 
   .story-item .en{font-size:.88rem}
   .story-item p{font-size:.75rem;line-height:1.5}
   .story-lead{margin-bottom:1.75rem}
+  .story .body-lg{margin-bottom:2.25rem}
   .story-close{padding-top:1.5rem}
 
-  /* contact form -> 2-up like desktop, with clear space above it */
-  .inq-form{grid-template-columns:1fr 1fr;gap:.8rem}
+  /* contact form -> 2-up like desktop; light divider above, balanced spacing */
+  .inq-grid{gap:2.25rem}
+  .inq-form{grid-template-columns:1fr 1fr;gap:.8rem;border-top:1px solid var(--c-border);padding-top:2.25rem}
   .inq-form input,.inq-form select,.inq-form textarea{font-size:.9rem;padding:.7rem .75rem}
   .inq-form label{font-size:.66rem;letter-spacing:.12em}
-  .inq-next .inq-wa{margin-bottom:2.2rem}
+  .inq-next .inq-wa{margin-bottom:0}
 
   /* process steps -> 2x2, column order [1][3]/[2][4] */
   .inq-next .steps-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;grid-auto-flow:column;gap:.7rem}
@@ -825,7 +828,7 @@ footer{background:var(--c-bg);border-top:1px solid var(--c-border);padding:5rem 
       <span class="cn-inline">肯思遠方</span>
     </div>
     <p class="story-lead reveal rd1" style="margin-bottom:1.25rem">A house built on conviction. Sharpened by judgment. Reaching across borders.</p>
-    <p class="body-lg reveal rd1" style="max-width:780px;margin-bottom:3.5rem"><span style="color:var(--c-warm)">Kennect Hemisphere</span> is a sourcing house in the Greater Bay Area, China: Hong Kong in perspective, Shenzhen in operation. We sit between China's manufacturing engine and the buyers who want real access to it — not just quotes.</p>
+    <p class="body-lg reveal rd1" style="max-width:780px"><span style="color:var(--c-warm)">Kennect Hemisphere</span> is a sourcing house in the Greater Bay Area, China: Hong Kong in perspective, Shenzhen in operation. We sit between China's manufacturing engine and the buyers who want real access to it — not just quotes.</p>
     <div class="story-grid reveal rd1">
       <div class="story-item"><div class="mark"><span class="cn">肯</span><span class="en">Conviction</span></div><p>We commit fully to every brief. You work directly with the people doing the sourcing — from first call to final shipment.</p></div>
       <div class="story-item"><div class="mark"><span class="cn">思</span><span class="en">Judgment</span></div><p>We understand the gap between Chinese manufacturers and international buyers because we work both sides. Briefs come in; considered answers go out.</p></div>
