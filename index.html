@@ -62,8 +62,8 @@
   --container:1320px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{background:var(--c-bg);color:var(--c-text);font-family:var(--f-body);font-weight:300;font-size:16px;line-height:1.6;overflow-x:hidden}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--c-bg);color:var(--c-text);font-family:var(--f-body);font-weight:300;font-size:16px;line-height:1.6;overflow-x:hidden;position:relative;width:100%;overscroll-behavior-x:none}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button{background:none;border:none;color:inherit;font:inherit;cursor:pointer}
@@ -569,23 +569,27 @@ footer{background:var(--c-bg);border-top:1px solid var(--c-border);padding:5rem 
 .inq-next .steps-grid .step:last-child{border-bottom:none}
 
 /* gold accent rule (brand champagne #D4A574) for section transitions */
-.rule-gold{height:1px;border:0;background:linear-gradient(90deg,transparent,var(--c-warm) 26%,var(--c-warm) 74%,transparent);opacity:.85;margin:clamp(1.2rem,3vw,2.6rem) 0}
+.rule-gold{height:1px;border:0;background:var(--c-warm);opacity:.6;margin:clamp(1.2rem,3vw,2.6rem) 0}
 
 /* DESKTOP: tighten the Markets -> Our Difference gap a little (img9) */
 @media(min-width:641px){
-  .section-pad.why{padding-top:clamp(4rem,7.5vw,7.5rem)}
-  .section-pad.howwework{padding-bottom:clamp(4rem,7.5vw,7.5rem)}
+  .section-pad.why{padding-top:clamp(3.5rem,6vw,6rem)}
+  .section-pad.howwework{padding-bottom:clamp(3.5rem,6vw,6rem)}
+  .section-pad.categories{padding-top:clamp(4rem,7vw,7rem)}
+  .svc-strip{margin-bottom:clamp(2.75rem,5vw,4.5rem)}
 }
 
 /* ===== MOBILE LAYOUT (phones) — identical wording to desktop; denser but with breathing room ===== */
 @media(max-width:640px){
   .section-pad{padding:clamp(3.6rem,9vw,5.25rem) 0}
+  .hero{align-items:flex-start}
+  .scroll-hint{bottom:1.5rem}
   .sec-head{margin-bottom:2.5rem}
   .steps-head{margin-top:2.75rem;margin-bottom:1.1rem}
   .svc-strip{margin-bottom:3.25rem}
 
   /* services + categories -> 2x3; cards hug content (no empty void) */
-  .cats-grid{grid-template-columns:repeat(2,1fr);gap:.7rem;align-items:start}
+  .cats-grid{grid-template-columns:repeat(2,1fr);gap:.7rem}
   .cat-card{padding:1.05rem}
   .cat-no{margin-bottom:.5rem;font-size:.85rem}
   .cat-card h3{font-size:1rem;margin-bottom:.5rem;line-height:1.2}
@@ -600,7 +604,7 @@ footer{background:var(--c-bg);border-top:1px solid var(--c-border);padding:5rem 
   .mk-card h3{font-size:1.05rem}
 
   /* difference -> 2-up BOXED cells (3rd spans full width); full text kept */
-  .why-list{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start}
+  .why-list{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
   .why-point{grid-template-columns:1fr;gap:.3rem;border:1px solid var(--c-border);padding:1.05rem .95rem}
   .why-point:hover{padding-left:.95rem}
   .why-point:last-child{grid-column:1/-1}
@@ -609,8 +613,8 @@ footer{background:var(--c-bg);border-top:1px solid var(--c-border);padding:5rem 
   .why-point p{font-size:.86rem;line-height:1.55;max-width:none}
 
   /* story pillars -> one row of three, BOXED, with breathing room around the characters */
-  .story-grid{grid-template-columns:repeat(3,1fr);gap:.7rem;align-items:start}
-  .story-item{border:1px solid var(--c-border);padding:.85rem .7rem}
+  .story-grid{grid-template-columns:repeat(3,1fr);gap:1rem;padding-top:1.6rem}
+  .story-item{border:0;padding:0}
   .story-item .mark{flex-direction:column;align-items:flex-start;gap:.15rem;margin-bottom:.55rem}
   .story-item .cn{font-size:1.25rem}
   .story-item .en{font-size:.88rem}
