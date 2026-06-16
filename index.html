@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trusted China Sourcing &amp; Supply Chain | Kennect Hemisphere</title>
+<title>Trusted China Sourcing &amp; Supply Chain — Kennect Hemisphere</title>
 <meta name="description" content="Project-led China sourcing and supply chain for global buyers. We vet the factories, hold the quality line, and coordinate production end to end — judgment, not just quotes.">
 <link rel="canonical" href="https://www.kshemisphere.com/">
 <meta name="theme-color" content="#050D21">
@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Kennect Hemisphere">
-<meta property="og:title" content="Trusted China Sourcing &amp; Supply Chain | Kennect Hemisphere">
+<meta property="og:title" content="Trusted China Sourcing &amp; Supply Chain — Kennect Hemisphere">
 <meta property="og:description" content="Project-led China sourcing &amp; supply chain. We vet factories, hold the quality line, and coordinate production end to end — judgment, not just quotes.">
 <meta property="og:url" content="https://www.kshemisphere.com/">
 <meta property="og:image" content="https://www.kshemisphere.com/share-card.jpg">
@@ -21,7 +21,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Trusted China Sourcing &amp; Supply Chain | Kennect Hemisphere">
+<meta name="twitter:title" content="Trusted China Sourcing &amp; Supply Chain — Kennect Hemisphere">
 <meta name="twitter:description" content="Project-led China sourcing &amp; supply chain — vetted factories, quality held, end-to-end coordination.">
 <meta name="twitter:image" content="https://www.kshemisphere.com/share-card.jpg">
 <script type="application/ld+json">
@@ -564,6 +564,61 @@ footer{background:var(--c-bg);border-top:1px solid var(--c-border);padding:5rem 
 .tband{position:relative;min-height:clamp(320px,46vh,520px);overflow:hidden;background:var(--c-bg)}
 .tband-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.72) brightness(.62);will-change:transform}
 .tband::before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(5,13,33,.62),rgba(5,13,33,.12) 28%,rgba(5,13,33,.12) 72%,rgba(5,13,33,.70))}
+
+/* keep desktop steps list identical after wrapping the steps in .steps-grid */
+.inq-next .steps-grid .step:last-child{border-bottom:none}
+/* hero: drop the scroll cue on small screens (it overlapped the second button) */
+@media(max-width:700px){.scroll-hint{display:none}}
+/* ===== MOBILE LAYOUT (phones) — identical wording to desktop, denser layout ===== */
+@media(max-width:640px){
+  .section-pad{padding:clamp(2.75rem,8vw,4rem) 0}
+  .sec-head{margin-bottom:2.25rem}
+  .steps-head{margin-top:2.5rem;margin-bottom:1rem}
+  .svc-strip{margin-bottom:2.75rem}
+
+  /* services + categories -> 2x3 */
+  .cats-grid{grid-template-columns:repeat(2,1fr);gap:.7rem}
+  .cat-card{padding:1.05rem}
+  .cat-no{margin-bottom:.5rem;font-size:.85rem}
+  .cat-card h3{font-size:1rem;margin-bottom:.5rem;line-height:1.2}
+  .cat-card p{font-size:.82rem;line-height:1.5}
+  .cat-card.has-img .cat-img{height:94px;margin:0 -1.05rem .9rem}
+
+  /* markets -> 2x2 */
+  .mk-grid{grid-template-columns:repeat(2,1fr);gap:.7rem}
+  .mk-home{flex-wrap:wrap;gap:.5rem .75rem;padding-bottom:1.5rem;margin-bottom:1.75rem}
+  .mk-home .sep{display:none}
+  .mk-body{padding:.95rem}
+  .mk-card h3{font-size:1.05rem}
+
+  /* difference -> 2-up (3rd spans full width); full text kept */
+  .why-list{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem 1.1rem}
+  .why-point{grid-template-columns:1fr;gap:.4rem;border-top:none;padding:0}
+  .why-point:hover{padding-left:0}
+  .why-point:last-child{border-bottom:none;grid-column:1/-1}
+  .why-point h3{font-size:1rem;margin-bottom:.45rem;line-height:1.25}
+  .why-point p{font-size:.86rem;line-height:1.55;max-width:none}
+
+  /* story pillars -> one row of three (Conviction / Judgment / Reach); full text kept */
+  .story-grid{grid-template-columns:repeat(3,1fr);gap:1rem}
+  .story-item{border-right:none;border-bottom:none;padding:0}
+  .story-item .mark{flex-direction:column;align-items:flex-start;gap:.2rem;margin-bottom:.5rem}
+  .story-item .cn{font-size:1.3rem}
+  .story-item .en{font-size:.9rem}
+  .story-item p{font-size:.76rem;line-height:1.5}
+
+  /* contact form -> 2-up like desktop */
+  .inq-form{grid-template-columns:1fr 1fr;gap:.8rem}
+  .inq-form input,.inq-form select,.inq-form textarea{font-size:.9rem;padding:.7rem .75rem}
+  .inq-form label{font-size:.66rem;letter-spacing:.12em}
+
+  /* process steps -> 2x2, column order [1][3]/[2][4] */
+  .inq-next .steps-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;grid-auto-flow:column;gap:.7rem}
+  .inq-next .steps-grid .step{border:1px solid var(--c-border);padding:.8rem;grid-template-columns:auto 1fr;gap:.35rem .55rem}
+  .inq-next .steps-grid .step:last-child{border:1px solid var(--c-border)}
+  .inq-next .steps-grid .step p{font-size:.78rem;line-height:1.45}
+  .inq-next .steps-grid .step-t{font-size:.95rem}
+}
 </style>
 </head>
 <body>
@@ -769,10 +824,12 @@ footer{background:var(--c-bg);border-top:1px solid var(--c-border);padding:5rem 
         <h2>Tell us what you're sourcing.</h2>
         <p class="body-lg" style="margin-bottom:1.6rem;font-size:1.02rem;line-height:1.6">Send us a brief and you'll receive a considered written response from the person who would run the project. The first assessment is free, with no obligation — and you'll hear back within two business days.</p>
         <span class="steps-head">What will happen next</span>
+        <div class="steps-grid">
         <div class="step"><span class="n">01</span><div class="step-body"><span class="step-t">Brief</span><p>The product, specifications, target market, certifications, volumes and timeline.</p></div></div>
         <div class="step"><span class="n">02</span><div class="step-body"><span class="step-t">Feasibility assessment</span><p>Within two business days: whether it's sourceable, the price, and the certifications.</p></div></div>
         <div class="step"><span class="n">03</span><div class="step-body"><span class="step-t">Supplier shortlist</span><p>A vetted shortlist with our recommendation — strengths, risks, and our selection.</p></div></div>
         <div class="step"><span class="n">04</span><div class="step-body"><span class="step-t">Production &amp; delivery</span><p>End-to-end execution — samples, OEM/ODM, QC, documentation and export.</p></div></div>
+        </div>
         <a class="inq-wa" href="https://wa.me/8526XXXXXXX?text=Hi%20Kennect%20Hemisphere%2C%20I%27d%20like%20to%20discuss%20a%20sourcing%20project." target="_blank" rel="noopener">Prefer WhatsApp? Message us directly <svg viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.738-.981zm5.176-6.292c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
       </div>
 
