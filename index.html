@@ -587,7 +587,10 @@ footer{background:var(--c-bg);border-top:1px solid var(--c-border);padding:5rem 
 @media(max-width:640px){
   .section-pad{padding:clamp(3.6rem,9vw,5.25rem) 0}
   .hero{align-items:flex-start}
-  .hero-sig{margin-bottom:1.1rem}
+  /* longer signature line ("Connect Markets, Reach Hemisphere.") kept on one line on phones */
+  .hero-sig{margin-bottom:1.1rem;gap:.7rem}
+  .hero-sig-line{width:28px}
+  .hero-sig-text{font-size:.88rem}
   .hero-divider{margin:.9rem 0}
   .hero-sub{margin-bottom:1.35rem}
   .scroll-hint{bottom:1.25rem;left:auto;right:clamp(1.25rem,5vw,1.75rem);transform:none;align-items:flex-end}
@@ -674,11 +677,11 @@ footer{background:var(--c-bg);border-top:1px solid var(--c-border);padding:5rem 
   <div class="hero-scrim"></div>
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-sig"><span class="hero-sig-line"></span><span class="hero-sig-text">Reach Hemisphere.</span></div>
+      <div class="hero-sig"><span class="hero-sig-line"></span><span class="hero-sig-text">Connect Markets, Reach Hemisphere.</span></div>
       <h1 class="h1">
         <span class="line"><span class="line-inner">Shenzhen-based.</span></span>
         <span class="line"><span class="line-inner">Hong&nbsp;Kong-anchored.</span></span>
-        <span class="line"><span class="line-inner">Built for global trade.</span></span>
+        <span class="line"><span class="line-inner">Built for global supply.</span></span>
       </h1>
       <div class="hero-divider"></div>
       <p class="body-lg hero-sub"><strong class="brand">Kennect Hemisphere</strong> is an international trade and sourcing house, connecting global buyers with <span class="hl">China's manufacturing engine</span> — with conviction, judgment, and reach across borders.</p>
@@ -717,7 +720,7 @@ footer{background:var(--c-bg);border-top:1px solid var(--c-border);padding:5rem 
 <section class="section-pad services" id="services">
   <div class="container">
     <div class="sec-head reveal">
-      <span class="eyebrow">What We Do · 01</span>
+      <span class="eyebrow eyebrow-warm">What We Do · 01</span>
       <h2>Our services, end to end.</h2>
       <p class="lead">We run the whole chain — sourcing the right product and supplier, then handling production, inspection, documentation and logistics to your destination.</p>
     </div>
@@ -802,7 +805,7 @@ HIDDEN MARKETS END (close comment) -->
   <div class="container">
     <div class="why-wrap">
       <div class="why-main reveal">
-        <span class="eyebrow">Our Difference · 03</span>
+        <span class="eyebrow eyebrow-warm">Our Difference · 03</span>
         <h2 style="margin:1.25rem 0 1.5rem">Why Kennect Hemisphere.</h2>
         <p class="body-lg" style="margin-bottom:2.5rem">You don't need more quotes — you need a partner who opens China's manufacturing engine and owns the outcome: protecting your margin, holding your standards, and catching problems before they reach your dock.</p>
         <div class="why-list">
