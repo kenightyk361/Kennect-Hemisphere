@@ -200,15 +200,6 @@ nav.topnav.scrolled .logo-img{height:50px}
 .band-tagline em{font-style:italic;color:var(--c-warm)}
 .band-sub{margin-top:1.75rem;max-width:520px;font-size:1.05rem;color:var(--c-text-2)}
 
-/* LOGO BREAK — one full screen, brand mark centred, nothing else */
-.logobreak{min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;background:var(--c-bg);padding:clamp(3rem,8vh,6rem) clamp(1.5rem,4vw,3.5rem)}
-.logobreak-mark{width:46%;max-width:640px;height:auto}
-@media(max-width:640px){
-  .logobreak{min-height:100svh;padding:clamp(2.5rem,7vh,4.5rem) 1.25rem}
-  .logobreak-mark{width:84%;max-width:340px}
-}
-@media(prefers-reduced-motion:reduce){.logobreak-mark{opacity:1!important;transform:none!important;transition:none!important}}
-
 /* SERVICES — image + cards split */
 .services{background:var(--c-bg)}
 .section-pad.services{padding-bottom:clamp(2.75rem,5.5vw,4.75rem)}
@@ -724,11 +715,6 @@ footer{background:var(--c-bg);border-top:1px solid var(--c-border);padding:5rem 
       <p class="band-sub">From the Greater Bay Area gateway — where Hong Kong's commercial perspective meets Shenzhen's manufacturing access.</p>
     </div>
   </div>
-</section>
-
-<!-- LOGO BREAK (full screen, brand mark only) -->
-<section class="logobreak" aria-label="Kennect Hemisphere">
-  <img decoding="async" class="logobreak-mark reveal" src="/logo-lockup.png" srcset="/logo-lockup.png 1x, /logo-lockup@2x.png 2x" width="1088" height="299" alt="Kennect Hemisphere" loading="lazy">
 </section>
 
 <!-- CORE SERVICES -->
